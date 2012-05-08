@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.Set;
 import java.util.SortedMap;
 
-import com.apple.eawt.Application;
+//import com.apple.eawt.Application;
 
 import br.ufla.dcc.grubix.simulator.Address;
 import br.ufla.dcc.grubix.simulator.LayerException;
