@@ -2,6 +2,8 @@
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="configuration.xsd">
     
+    <description write="Aplicacao que representa transmissões entre nós na rede indo do nó com id = 1 a 30." />
+    
     <field>
         <dimension x="200" y="185"/>
     </field>
@@ -160,7 +162,7 @@
         <log>true</log>
         <nameHistoryFile>LogPheromoneUAV-STATIC</nameHistoryFile>
         <nameStatisticsFile>AppPheromoneUAV-ScenarioStatistic</nameStatisticsFile>
-        <logClass>br.ufla.dcc.grubix.debug.compactlogging.CompactFileLogger</logClass>
+        <logClass>br.ufla.dcc.grubix.debug.compactlogging.XMLFileLogger</logClass>
         <filter>
               <description>Sample filter</description>
               <logdata>true</logdata>
