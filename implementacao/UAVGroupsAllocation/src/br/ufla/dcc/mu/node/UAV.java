@@ -20,7 +20,6 @@ import br.ufla.dcc.mu.wuc.LayPheromoneWakeUpCall;
 public class UAV extends GenericNode {
 	
 	private static final int LAY_PHEROMONE_DELAY = 800;
-	public static  int RECEIVED_FROM_NODE = 0;
 	//Attribute isWarned is false until UAV hasn't received any alarm. When its received, it becomes true
 	private static boolean isWarned = false;
 	private Map<Integer,Float> resources = new HashMap<Integer,Float>();
