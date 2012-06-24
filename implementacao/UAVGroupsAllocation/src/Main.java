@@ -9,13 +9,5 @@ public class Main {
 		args = new String[1];
 		args[0] = path;
 		Simulator.main(args);
-		
-		
-		
-		
-		System.out.println(RegularNode.SENT_TO_UAV + "   " +  UAV.RECEIVED_FROM_NODE);
 	}
-	
-	
-	
 }
