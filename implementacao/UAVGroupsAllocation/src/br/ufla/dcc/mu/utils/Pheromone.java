@@ -46,7 +46,7 @@ public class Pheromone {
 	}
 	
 	public void set(double d){
-		if (this.value < d)
+//		if (this.value < d)
 			this.value = d;
 	}
 	
@@ -86,6 +86,10 @@ public class Pheromone {
 		clone.value = this.value;
 		
 		return clone;
+	}
+
+	public NodeId getId() {
+		return id;
 	}
 	
 }
