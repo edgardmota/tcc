@@ -10,19 +10,19 @@ import br.ufla.dcc.grubix.simulator.Position;
 public class Alarm {
 	private Position position;
 	private double timeStamp;
-	private NodeId trailedUAV;
-	private float pheromoneAmount;
-	private List<NodeId> trackedUAVs;
+	private int trailedUAV;
+	private Map<NodeId, Pheromone> storedPheromones;
+	private List<Integer> trackedUAVs;
 	private Map<Integer,Float> eventNeedsList = new HashMap<Integer,Float>();
-	private int divisionNode;
+	private int root;
 	
-	public Alarm(Position position, double timeStamp, Map<Integer,Float> eventNeedsList, int divisionNode, NodeId trailedUAV, float pheromoneAmount, List<NodeId> trackedUAVs){
+	public Alarm(Position position, double timeStamp, Map<Integer,Float> eventNeedsList, int root, int trailedUAV, Map<NodeId, Pheromone> storedPheromones, List<Integer> trackedUAVs){
 		this.position = position;
 		this.timeStamp = timeStamp;
-		this.setPheromoneAmount(pheromoneAmount);
+		this.setPheromoneAmount(storedPheromones);
 		this.setTrailedUAV(trailedUAV);
 		this.setEventNeedsList(eventNeedsList);
-		this.setDivisionNode(divisionNode);
+		this.setRoot(root);
 		this.setTrackedUAVs(trackedUAVs);
 	}
 
@@ -33,11 +33,11 @@ public class Alarm {
 		return timeStamp;
 	}
 
-	public NodeId getTrailedUAV() {
+	public int getTrailedUAV() {
 		return trailedUAV;
 	}
 
-	public void setTrailedUAV(NodeId trailedUAV) {
+	public void setTrailedUAV(int trailedUAV) {
 		this.trailedUAV = trailedUAV;
 	}
 
@@ -49,31 +49,31 @@ public class Alarm {
 		this.eventNeedsList = eventNeedsList;
 	}
 
-	public int getDivisionNode() {
-		return divisionNode;
+	public int getRoot() {
+		return root;
 	}
 
-	public void setDivisionNode(int divisionNode) {
-		this.divisionNode = divisionNode;
+	public void setRoot(int divisionNode) {
+		this.root = divisionNode;
 	}
-	public void addTrackedUAV(NodeId uav){
+	public void addTrackedUAV(int uav){
 		this.trackedUAVs.add(uav);
 	}
 
-	public List<NodeId> getTrackedUAVs() {
+	public List<Integer> getTrackedUAVs() {
 		return trackedUAVs;
 	}
 
-	public void setTrackedUAVs(List<NodeId> trackedUAVs) {
+	public void setTrackedUAVs(List<Integer> trackedUAVs) {
 		this.trackedUAVs = trackedUAVs;
 	}
 
-	public float getPheromoneAmount() {
-		return pheromoneAmount;
+	public Map<NodeId, Pheromone> getPheromoneAmount() {
+		return storedPheromones;
 	}
 
-	public void setPheromoneAmount(float pheromoneAmount) {
-		this.pheromoneAmount = pheromoneAmount;
+	public void setPheromoneAmount(Map<NodeId, Pheromone> storedPheromones2) {
+		this.storedPheromones = storedPheromones2;
 	}
 	
 }

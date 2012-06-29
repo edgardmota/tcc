@@ -20,7 +20,7 @@ public class Pheromone {
 	
 	private double value;
 	private NodeId id;
-	private final double increment = 0.1;
+//	private final double increment = 0.1;
 	private final double decrement = 0.001;
 	private Map<Integer,Float> resources = new HashMap<Integer,Float>();
 	
@@ -55,10 +55,10 @@ public class Pheromone {
 	}
 	
 	
-	public void increase ()
-	{
-		this.increase(this.increment);
-	}
+//	public void increase ()
+//	{
+//		this.increase(this.increment);
+//	}
 	
 	public void increase (double v)
 	{

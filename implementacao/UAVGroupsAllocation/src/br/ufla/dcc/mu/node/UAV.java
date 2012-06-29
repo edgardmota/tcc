@@ -13,10 +13,8 @@ import br.ufla.dcc.grubix.simulator.event.StartSimulation;
 import br.ufla.dcc.grubix.simulator.event.WakeUpCall;
 import br.ufla.dcc.grubix.simulator.kernel.SimulationManager;
 import br.ufla.dcc.mu.packet.AlarmPacket;
-import br.ufla.dcc.mu.packet.HasMePacket;
 import br.ufla.dcc.mu.packet.PheromonePacket;
 import br.ufla.dcc.mu.utils.Alarm;
-import br.ufla.dcc.mu.utils.HasMe;
 import br.ufla.dcc.mu.wuc.LayPheromoneWakeUpCall;
 
 public class UAV extends GenericNode {
@@ -70,15 +68,15 @@ public class UAV extends GenericNode {
 //	}
 
 	private void handleAlarm(Alarm alarm) {
-		if (!this.isWarned()){
-			boolean isMyAlarm = alarm.getTrailedUAV().equals(this.getId());
-			if(isMyAlarm){
-//				RegularNode.isTracking = false;
-				SimulationManager.logNodeState(getId(), "Alarm Received", "int", "80");
-				this.warnUAV();
-				System.out.println("Alarme chegou em " + this.node.getId().toString());
-			}
-		}
+//		if (!this.isWarned()){
+//			boolean isMyAlarm = alarm.getTrailedUAV().equals(this.getId());
+//			if(isMyAlarm){
+////				RegularNode.isTracking = false;
+//				SimulationManager.logNodeState(getId(), "Alarm Received", "int", "80");
+//				this.warnUAV();
+//				System.out.println("Alarme chegou em " + this.node.getId().toString());
+//			}
+//		}
 	}
 
 	public void processWakeUpCall(WakeUpCall wuc){

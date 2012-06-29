@@ -8,12 +8,12 @@ import br.ufla.dcc.mu.utils.Pheromone;
 public class AnswerAlarmPacket extends ApplicationPacket {
 
 	private Pheromone pheromone;
-	private int sinkNode;
+	private AlarmPacket alarmPacket;
 	
-	public AnswerAlarmPacket(Address sender, NodeId receiver, Pheromone pheromone, int sinkNode) {
+	public AnswerAlarmPacket(Address sender, NodeId receiver, Pheromone pheromone, AlarmPacket alarmPacket) {
 		super(sender, receiver);
 		this.setPheromone(pheromone);
-		this.setSinkNode(sinkNode);
+		this.setAlarmPacket(alarmPacket);
 	}
 
 	public Pheromone getPheromone() {
@@ -25,11 +25,16 @@ public class AnswerAlarmPacket extends ApplicationPacket {
 	}
 
 	public int getSinkNode() {
-		return sinkNode;
+		return this.getAlarmPacket().getSender().getId().asInt();
 	}
 
-	public void setSinkNode(int sinkNode) {
-		this.sinkNode = sinkNode;
+
+	public AlarmPacket getAlarmPacket() {
+		return alarmPacket;
+	}
+
+	public void setAlarmPacket(AlarmPacket alarmPacket) {
+		this.alarmPacket = alarmPacket;
 	}
 	
 	

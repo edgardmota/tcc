@@ -1,6 +1,5 @@
 import br.ufla.dcc.grubix.simulator.kernel.Simulator;
-import br.ufla.dcc.mu.node.RegularNode;
-import br.ufla.dcc.mu.node.UAV;
+
 
 public class Main {
 
